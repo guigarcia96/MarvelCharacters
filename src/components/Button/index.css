@@ -1,0 +1,23 @@
+#button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+#button a {
+  text-decoration: none;
+  color: white;
+  width: 150px;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: black;
+  border-radius: 10px;
+  text-align: center;
+  transition: 2s;
+}
+#button a:hover {
+
+  color: black;
+  background-color: white;
+
+}

@@ -1,0 +1,59 @@
+.character {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.description-theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.description-theme img {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  border: 2px solid white;
+}
+.description-theme h1 {
+  font-size: 3.6rem;
+  margin-bottom: 0;
+}
+.description-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description-desc p {
+  font-size: 1.3rem;
+}
+.appears-on {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.appears-on ul {
+  max-width: 1100px;
+  display: flex;
+  flex-direction: row;
+  
+
+  
+  
+
+}
+.appears-on ul li {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  display: flex;
+  margin: 0 2rem;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  width: 300px;
+  height: 60px;
+}

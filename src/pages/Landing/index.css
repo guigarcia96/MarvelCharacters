@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Bebas Neue', sans-serif;
+  background-color: #F0131E;
+  color: white;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section p {
+  font-size: 2.5rem;
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
