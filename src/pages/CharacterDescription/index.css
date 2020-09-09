@@ -20,40 +20,29 @@
   margin-bottom: 0;
 }
 .description-desc {
+  
+  margin: 0 1.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .description-desc p {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
 }
 .appears-on {
-  
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .appears-on ul {
-  max-width: 1100px;
-  display: flex;
-  flex-direction: row;
   
-
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
   
-  
-
 }
-.appears-on ul li {
-  color: black;
-  background-color: white;
-  border: 1px solid black;
-  display: flex;
-  margin: 0 2rem;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  width: 300px;
-  height: 60px;
+.appears-on p {
+  font-size: 2rem;
 }

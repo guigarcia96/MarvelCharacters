@@ -5,7 +5,12 @@ import {Link} from 'react-router-dom'
 const Button = (props) => {
   return(
     <div id="button">
-       <Link to={props.path}>
+       <Link to={
+          {
+            pathname: props.path,
+             state: props.title         
+           }
+       }>
         {props.name}
         </Link>
     </div>

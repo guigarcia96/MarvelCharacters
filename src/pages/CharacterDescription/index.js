@@ -1,33 +1,65 @@
 import React from 'react';
 import './index.css';
+import { useLocation } from 'react-router-dom';
 import Header from '../../components/Header';
-import Pantera from '../../assets/img/pantera.jpeg'
+
+import CardButton from '../../components/CardButton';
+
 
 function CharacterDescription() {
+  let character = useLocation().state;
+  const series = character.series.items;
+  const stories = character.stories.items;
+
+
+
+
   return (
 
     <div id='description-container'>
       <Header title='Marvel Characters' />
       <div className='character'>
         <div className='description-theme'>
-          <img src={Pantera} alt="Black Panther" />
-          <h1>Pantera Negra</h1>
+          <img src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt="Black Panther" />
+          <h1>{character.name}</h1>
         </div>
 
         <div className='description-desc'>
-          <p>lorem ipsum bijsiajiajsiajsaijsiajsaijsisaijsai</p>
+          <p>{character.description}</p>
         </div>
 
         <div className='appears-on'>
-          <p> Aparece em:</p>
+          <p> Series:</p>
           <ul>
-            <li>Filme 1</li>
-            <li>Filme 2</li>
-            <li>Filme 3</li>
-            <li>Filme 4</li>
-            
+
+
+            {
+              series.map((element, index) => (
+                <CardButton key={index} movie={element.name} path={element.resourceURI} />
+              ))
+            }
+
+
           </ul>
         </div>
+
+        <div className='appears-on'>
+          <p> Stories:</p>
+          <ul>
+
+
+            {
+              stories.map((element, index) => (
+                <CardButton key={index} movie={element.name} path={element.resourceURI} />
+              ))
+            }
+
+
+          </ul>
+        </div>
+
+
+
       </div>
 
     </div>

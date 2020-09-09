@@ -9,7 +9,7 @@ function Routes() {
   return(
     <BrowserRouter>
       <Route path='/' exact component={Landing} />
-      <Route path='/characters' component={Characters} />
+      <Route path='/characters' component={Characters}  />
       <Route path='/characters-description' component={CharactersDescription} />
     
     </BrowserRouter>

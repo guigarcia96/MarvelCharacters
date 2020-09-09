@@ -1,16 +1,22 @@
 import React from 'react';
 import './index.css'
-import {Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function Card(props) {
   return (
-    <div class="center">
-      <div class="property-card">
-        <Link to={`/${props.route}`}  >
-          <div class="property-image">
+    <div className="center">
+      <div className="property-card">
+        <Link to={
+           {
+            pathname: `/${props.route}`,
+             state: props.value      
+           }
+        }  >
+          <div className="property-image" style={{ backgroundImage: `url(${props.photo})` }} >
+
 
           </div></Link>
-        <div class="property-description">
+        <div className="property-description">
           <h5> {props.title} </h5>
           <p>{props.description}</p>
         </div>
