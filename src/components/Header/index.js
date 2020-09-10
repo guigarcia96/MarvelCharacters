@@ -11,7 +11,7 @@ const Header = (props) => {
       <Link to='/'>
         <h1>{props.title}</h1>
       </Link>
-      <img src={CaptainAmerica} alt="Black Panther"/>
+      <img src={CaptainAmerica} alt="Captain America"/>
     </header>
   )
 

@@ -18,6 +18,7 @@
 .description-theme h1 {
   font-size: 3.6rem;
   margin-bottom: 0;
+  text-align: center;
 }
 .description-desc {
   
@@ -31,18 +32,61 @@
   font-size: 1.6rem;
 }
 .appears-on {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .appears-on ul {
-  
   display: grid;
   grid-template-columns: 2fr 2fr 2fr;
   
 }
 .appears-on p {
+  
   font-size: 2rem;
+  
 }
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    #description-container header img {
+      display: none;
+    }
+
+    .description-theme {
+      margin-top: 1.2rem;
+    }
+
+    .description-theme img {
+      width: 150px;
+      height: 150px;
+    }
+
+    .description-theme h1 {
+      font-size: 2rem;
+    }
+
+    .description-desc p {
+      font-size: 1.2rem;
+      text-align: center;
+      
+    }
+    .appears-on ul {
+      padding: 0;
+      margin-top: -1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    
+
+  }
+

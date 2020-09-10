@@ -20,3 +20,21 @@ form {
   align-items: center;
   justify-content: center;
 }
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    section {
+      margin-top: 3rem;
+    }
+
+    section p {
+      font-size: 1.4rem;
+      margin: 2rem;
+      text-align: center;
+    }
+
+  }
