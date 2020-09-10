@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../../components/Header';
 import Card from '../../components/Card'
+import LoadingOverlay from 'react-loading-overlay';
+
 import './index.css'
 import { useLocation } from 'react-router-dom';
 import CryptoJs from 'crypto-js';
@@ -29,40 +31,46 @@ function Characters() {
       })
   }, [])
 
-  if(characters.length < 1) {
+  if (characters.length < 1) {
     return (
       <div id="characters-container">
-      <Header title='Marvel Characters' />
-      <div className="unavailable">
-        <p>Unavailable Character with this name</p>
-      </div>
+        <Header title='Marvel Characters' />
+        <div className="unavailable">
+          <LoadingOverlay
+            active={true}
+            spinner
+            text='Loading...'
+          >
+            
+          </LoadingOverlay>
+        </div>
       </div>
     )
-  }else {
+  } else {
     return (
       <div id="characters-container">
         <Header title='Marvel Characters' />
         <div className="cards">
           {
-  
+
             characters.map((element) => (
-  
+
               <Card title={element.name} key={element.id} description={element.description}
                 photo={`${element.thumbnail.path}.${element.thumbnail.extension}`}
                 route='characters-description' value={element}
               />
-  
+
             ))
           }
-  
+
         </div>
-  
+
       </div>
     )
   }
 
 
- 
+
 }
 
 export default Characters;

@@ -4,11 +4,7 @@
   display: grid;
   grid-template-columns: 2fr 2fr 2fr;
 }
-.unavailable {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 
 .unavailable p {
   margin-top: 6rem;
