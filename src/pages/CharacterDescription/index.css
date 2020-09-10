@@ -30,6 +30,8 @@
 
 .description-desc p {
   font-size: 1.6rem;
+  text-align: center;
+  
 }
 .appears-on {
   display: flex;
