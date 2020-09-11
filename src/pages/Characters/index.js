@@ -19,11 +19,12 @@ function Characters() {
 
   const publicKey = '145ddbf92c598028adbd37280fca398b';
   const privateKey = 'fe34d571db8241d4961eef238845439e625f8c21';
+  const maxCharacters = 100;
   let hash = CryptoJs.MD5(timestamp + privateKey + publicKey);
   
 
   useEffect(() => {
-    axios.get(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${name}&ts=${timestamp}&apikey=145ddbf92c598028adbd37280fca398b&hash=${hash}`)
+    axios.get(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${name}&limit=${maxCharacters}&ts=${timestamp}&apikey=145ddbf92c598028adbd37280fca398b&hash=${hash}`)
       .then(resp => {
         const array = resp.data.data.results;
         setCharacters(array)
