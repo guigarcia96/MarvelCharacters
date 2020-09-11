@@ -1,0 +1,10 @@
+section {
+  display: flex;
+  flex-direction: column;
+}
+section h1 {
+  font-size: 3.3rem;
+}
+section p{
+  font-size: 1.8rem;
+}
