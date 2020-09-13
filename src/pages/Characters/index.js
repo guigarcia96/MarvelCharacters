@@ -23,7 +23,7 @@ function Characters() {
   
 
   useEffect(() => {
-    axios.get(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${name}&limit=${maxCharacters}&ts=${timestamp}&apikey=145ddbf92c598028adbd37280fca398b&hash=${hash}`)
+    axios.get(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${name}&limit=${maxCharacters}&ts=${timestamp}&apikey=${pubk}&hash=${hash}`)
       .then(resp => {
         
         const array = resp.data.data.results;
