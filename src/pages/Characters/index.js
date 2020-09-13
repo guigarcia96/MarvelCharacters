@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Header from '../../components/Header';
 import Card from '../../components/Card'
 import LoadingOverlay from 'react-loading-overlay';
-
 import './index.css'
 import { useLocation } from 'react-router-dom';
 import CryptoJs from 'crypto-js';
@@ -17,15 +16,16 @@ function Characters() {
 
   let timestamp = Date.now().toString();
 
-  const publicKey = '145ddbf92c598028adbd37280fca398b';
-  const privateKey = 'fe34d571db8241d4961eef238845439e625f8c21';
+  const pubk = process.env.REACT_APP_PUBLIC_KEY;
+  const priK = process.env.REACT_APP_PRIVATE_KEY;
   const maxCharacters = 100;
-  let hash = CryptoJs.MD5(timestamp + privateKey + publicKey);
+  let hash = CryptoJs.MD5(timestamp + priK + pubk);
   
 
   useEffect(() => {
     axios.get(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${name}&limit=${maxCharacters}&ts=${timestamp}&apikey=145ddbf92c598028adbd37280fca398b&hash=${hash}`)
       .then(resp => {
+        
         const array = resp.data.data.results;
         setCharacters(array)
         if(array.length <1) {
@@ -36,7 +36,7 @@ function Characters() {
       }).catch(erro => {
         console.log(erro)
       })
-  }, [])
+  },[])
 
   if (loading) {
 
@@ -92,12 +92,6 @@ function Characters() {
     }
     
   }
-
-  
-
- 
-
-
 
 }
 
